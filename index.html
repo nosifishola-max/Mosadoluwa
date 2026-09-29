@@ -171,10 +171,19 @@ section{padding:clamp(56px,7vw + 16px,112px) 0}
 .property{background:var(--green-2);color:var(--cream);--tick-line:rgba(250,248,243,.16)}
 .property .eyebrow{color:var(--gold-l)}.property h2{color:#fff}.property p{color:rgba(250,248,243,.8)}.property .ticks li{color:var(--cream)}
 .household{background:var(--sand)}
+.sec-head{max-width:70ch;margin-bottom:clamp(28px,4vw,44px)}
+.feature{display:grid;gap:22px;margin-bottom:clamp(18px,3vw,28px)}
+.feature .m-card.feature-main{width:100%;max-height:560px}
+.feature-side{display:flex;flex-direction:column;gap:16px}
+.feature-side .m-card{width:100%}
+@media (min-width:860px){.feature{grid-template-columns:1.05fr .95fr;align-items:start}}
 @media (min-width:900px){.split{grid-template-columns:1fr 1fr;gap:72px}.household .split-media{order:-1}}
 
 /* about */
 .about{background:#fff;border-top:1px solid var(--line)}
+.why{background:#fff;border-top:1px solid var(--line)}
+.why .trust{grid-template-columns:repeat(2,1fr)}
+@media (min-width:760px){.why .trust{grid-template-columns:repeat(4,1fr)}}
 .about-grid{display:grid;gap:36px}
 .trust{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .trust li{padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--cream);font-weight:500;font-size:.92rem;color:var(--green)}
@@ -279,8 +288,8 @@ dialog#viewer::backdrop{background:rgba(6,20,16,.9)}
   <div class="wrap">
     <div>
       <span class="eyebrow">Quarry Road, Abeokuta · RC 8819223</span>
-      <h1>Reliable Building Materials, Properties &amp; Household Solutions</h1>
-      <p class="lede">Granite and building materials loaded from the quarry and delivered to sites across Southwest Nigeria. We also handle land and property opportunities, and quality household items.</p>
+      <h1>Your One-Stop Business for Building Materials, Property &amp; Household Items</h1>
+      <p class="lede">Mosadoluwa Karakata Enterprises is a one-stop business based on Quarry Road, Abeokuta. We supply building materials, handle land and property, and deal in household items.</p>
       <div class="hero-cta">
         <a class="btn btn-gold" href="https://wa.me/2347030172780?text=Hello%20Mosadoluwa%20Karakata%20Enterprises%2C%20I%20found%20your%20business%20online%20and%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5s-.6-1.5-.9-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s1 2.5 1.1 2.6c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>Chat on WhatsApp</a>
         <a class="btn btn-light" href="#materials">Explore Our Services</a>
@@ -297,6 +306,22 @@ dialog#viewer::backdrop{background:rgba(6,20,16,.9)}
     </div>
   </div>
 </section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="eyebrow">Who we are</span>
+      <h2>One business, three connected areas</h2>
+      <p>We're based on Quarry Road, Abeokuta, working across three connected areas — building materials, land and property, and household items.</p>
+      <ul class="facts"><li><b>RC:</b> 8819223</li><li><b>Office:</b> Quarry Road, Abeokuta</li></ul>
+    </div>
+    <figure class="photo reveal">
+      <img src="assets/img/delivery-tricycle.webp" alt="Mosadoluwa Karakata Enterprises delivery tricycle with a driver on the road" width="592" height="1072" loading="lazy" decoding="async">
+      <figcaption>Our delivery tricycle on the road.</figcaption>
+    </figure>
+  </div>
+</section>
+
 
 <!-- MATERIALS -->
 <section id="materials">
@@ -370,56 +395,56 @@ dialog#viewer::backdrop{background:rgba(6,20,16,.9)}
 
 <!-- PROPERTY -->
 <section class="property" id="property">
-  <div class="wrap split">
-    <div class="reveal">
+  <div class="wrap">
+    <div class="sec-head reveal">
       <span class="eyebrow">Land &amp; Property</span>
-      <h2>Helping you find your dream home with ease</h2>
-      <p>Beyond building materials, we help customers find houses and property opportunities. Tell us what you are looking for and we will respond directly.</p>
-      <ul class="ticks">
-        <li>Houses for sale</li><li>Houses for rent</li><li>Investment opportunities</li><li>Help finding a suitable home or property</li>
-      </ul>
-      <a class="btn btn-gold" href="https://wa.me/2347030172780?text=Hello%2C%20I%27d%20like%20to%20make%20an%20enquiry%20about%20land%20and%20properties." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5s-.6-1.5-.9-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s1 2.5 1.1 2.6c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>Make an Enquiry</a>
+      <h2>We connect buyers and sellers with suitable land and property opportunities</h2>
+      <p>Beyond building materials, we help customers find houses and property opportunities. Take a look through a couple of properties we've handled below.</p>
     </div>
-    <div class="split-media reveal">
-      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1000&q=75&auto=format&fit=crop" alt="Representative image of a modern house" width="1000" height="750" loading="lazy" decoding="async">
-      <span class="rep">Representative image, not a client property</span>
+    <div class="feature reveal">
+      <button class="m-card m-p feature-main" type="button" data-type="video" data-src="assets/video/property-tour-1.mp4" data-poster="assets/img/property-tour-1.jpg" data-caption="Full walkthrough of a property we've handled" style="aspect-ratio:576/1024" aria-label="Play video: Full walkthrough of a property we've handled"><img src="assets/img/property-tour-1.jpg" alt="Full walkthrough of a property we've handled" width="576" height="1024" loading="lazy" decoding="async"><span class="chip">Property tour</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span><span class="cap">Full walkthrough of a property we've handled</span></button>
+      <div class="feature-side">
+        <button class="m-card m-l feature-support" type="button" data-type="image" data-src="assets/img/property-bungalow.webp" data-caption="Exterior of a property we've handled" style="aspect-ratio:810/832" aria-label="View photo: Exterior of a property we've handled"><img src="assets/img/property-bungalow.webp" alt="A cream and brown bungalow with a paved driveway" width="810" height="832" loading="lazy" decoding="async"><span class="chip">Property</span><span class="play zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg></span><span class="cap">Exterior of a property we've handled</span></button>
+        <ul class="ticks">
+          <li>Houses for sale</li><li>Houses for rent</li><li>Investment opportunities</li>
+        </ul>
+        <a class="btn btn-gold" href="https://wa.me/2347030172780?text=Hello%20Mosadoluwa%20Karakata%20Enterprises%2C%20I%20am%20interested%20in%20the%20land/property%20I%20saw%20on%20your%20website.%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5s-.6-1.5-.9-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s1 2.5 1.1 2.6c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>Ask About This Property</a>
+      </div>
     </div>
+    <div class="stage"><div class="stage-head"><span class="stage-num">+</span><div><h4>Another property</h4><p>A second property we've handled — walk through the full video.</p></div></div><div class="strip" role="group" aria-label="More properties" tabindex="0"><button class="m-card m-p" type="button" data-type="video" data-src="assets/video/property-tour-2.mp4" data-poster="assets/img/property-tour-2.jpg" data-caption="Walkthrough of a second property under finishing" style="aspect-ratio:464/832" aria-label="Play video: Walkthrough of a second property under finishing"><img src="assets/img/property-tour-2.jpg" alt="Walkthrough of a second property under finishing" width="464" height="832" loading="lazy" decoding="async"><span class="chip">Property tour</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span><span class="cap">Walkthrough of a second property under finishing</span></button></div></div>
   </div>
 </section>
 
 <!-- HOUSEHOLD -->
 <section class="household" id="household">
-  <div class="wrap split">
-    <div class="split-media reveal">
-      <img src="https://images.unsplash.com/photo-1680965585463-386646047473?w=1000&q=75&auto=format&fit=crop" alt="Representative image of a furnished living room" width="1000" height="750" loading="lazy" decoding="async">
-      <span class="rep">Representative image, not a client product</span>
-    </div>
-    <div class="reveal">
+  <div class="wrap">
+    <div class="sec-head reveal">
       <span class="eyebrow">Household Items</span>
-      <h2>Quality, affordable items for the home</h2>
-      <p>We deal in household items, both new and pre-loved. Buy, sell and connect through us.</p>
-      <ul class="ticks">
-        <li>Quality and affordable items</li><li>New &amp; pre-loved products</li><li>Buy, sell, and connect</li>
-      </ul>
-      <a class="btn btn-gold" href="https://wa.me/2347030172780?text=Hello%2C%20I%27d%20like%20to%20ask%20about%20available%20household%20items." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5s-.6-1.5-.9-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s1 2.5 1.1 2.6c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>Ask About Available Items</a>
+      <h2>Buy · Sell · Connect</h2>
+      <p>We connect buyers with sellers of household items, and we also buy and sell household items ourselves — quality and affordable, new and pre-loved.</p>
     </div>
+    <div class="feature reveal">
+      <button class="m-card m-l feature-main" type="button" data-type="image" data-src="assets/img/household-sofas.webp" data-caption="A sofa set we've handled" style="aspect-ratio:1000/699" aria-label="View photo: A sofa set we've handled"><img src="assets/img/household-sofas.webp" alt="A blue corner sofa set with a mustard armchair" width="1000" height="699" loading="lazy" decoding="async"><span class="chip">Featured</span><span class="play zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg></span><span class="cap">A sofa set we've handled</span></button>
+      <div class="feature-side">
+        <button class="m-card m-p feature-support" type="button" data-type="image" data-src="assets/img/household-washer-lg.webp" data-caption="LG washing machine" style="aspect-ratio:574/1280" aria-label="View photo: LG washing machine"><img src="assets/img/household-washer-lg.webp" alt="An LG front-load washing machine" width="574" height="1280" loading="lazy" decoding="async"><span class="chip">Household</span><span class="play zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg></span><span class="cap">LG washing machine</span></button>
+        <button class="m-card m-p feature-support" type="button" data-type="video" data-src="assets/video/household-washer.mp4" data-poster="assets/img/household-washer.jpg" data-caption="Samsung washing machine, close look" style="aspect-ratio:356/640" aria-label="Play video: Samsung washing machine, close look"><img src="assets/img/household-washer.jpg" alt="Samsung washing machine, close look" width="356" height="640" loading="lazy" decoding="async"><span class="chip">Household</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span><span class="cap">Samsung washing machine, close look</span></button>
+        <a class="btn btn-gold" href="https://wa.me/2347030172780?text=Hello%20Mosadoluwa%20Karakata%20Enterprises%2C%20I%20saw%20a%20household%20item%20on%20your%20website%20and%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5s-.6-1.5-.9-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s1 2.5 1.1 2.6c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>Ask About an Item</a>
+      </div>
+    </div>
+    <div class="stage"><div class="stage-head"><span class="stage-num">+</span><div><h4>More items</h4><p>A few more pieces we've handled recently.</p></div></div><div class="strip" role="group" aria-label="More household items" tabindex="0"><button class="m-card m-l" type="button" data-type="image" data-src="assets/img/household-tv.webp" data-caption="Smart TV" style="aspect-ratio:800/602" aria-label="View photo: Smart TV"><img src="assets/img/household-tv.webp" alt="A Hisense smart TV showing its home screen" width="800" height="602" loading="lazy" decoding="async"><span class="chip">Household</span><span class="play zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg></span><span class="cap">Smart TV</span></button><button class="m-card m-p" type="button" data-type="image" data-src="assets/img/household-ac.webp" data-caption="Split air conditioning unit" style="aspect-ratio:800/1066" aria-label="View photo: Split air conditioning unit"><img src="assets/img/household-ac.webp" alt="A Hisense split air conditioning unit" width="800" height="1066" loading="lazy" decoding="async"><span class="chip">Household</span><span class="play zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg></span><span class="cap">Split air conditioning unit</span></button><button class="m-card m-p" type="button" data-type="image" data-src="assets/img/household-generator.webp" data-caption="Generator" style="aspect-ratio:800/864" aria-label="View photo: Generator"><img src="assets/img/household-generator.webp" alt="A Thermocool petrol generator" width="800" height="864" loading="lazy" decoding="async"><span class="chip">Household</span><span class="play zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg></span><span class="cap">Generator</span></button><button class="m-card m-p" type="button" data-type="image" data-src="assets/img/household-freezer.webp" data-caption="Chest freezer" style="aspect-ratio:810/1080" aria-label="View photo: Chest freezer"><img src="assets/img/household-freezer.webp" alt="An open Snowsea chest freezer" width="810" height="1080" loading="lazy" decoding="async"><span class="chip">Household</span><span class="play zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg></span><span class="cap">Chest freezer</span></button></div></div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about" id="about">
-  <div class="wrap about-grid">
-    <div class="reveal">
-      <span class="eyebrow">About the business</span>
-      <h2>One business, three areas</h2>
-      <p>Mosadoluwa Karakata Enterprises is a one-stop business based on Quarry Road, Abeokuta. We supply building materials, handle land and property, and deal in household items.</p>
-      <ul class="trust"><li>Quality products &amp; services</li><li>Timely delivery</li><li>Competitive prices</li><li>Satisfaction guaranteed</li></ul>
-      <ul class="facts"><li><b>RC:</b> 8819223</li><li><b>Office:</b> Quarry Road, Abeokuta</li></ul>
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why choose us</span>
+      <h2>Business value</h2>
     </div>
-    <figure class="photo reveal">
-      <img src="assets/img/delivery-tricycle.webp" alt="Mosadoluwa Karakata Enterprises delivery tricycle with a driver on the road" width="592" height="1072" loading="lazy" decoding="async">
-      <figcaption>Our delivery tricycle on the road.</figcaption>
-    </figure>
+    <ul class="trust reveal"><li>Quality products &amp; services</li><li>Timely delivery</li><li>Competitive prices</li><li>Satisfaction guaranteed</li></ul>
   </div>
 </section>
 
